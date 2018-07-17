@@ -5,14 +5,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import OLDmodel.RailLine;
+import OLDmodel.RailwayMap;
+import OLDmodel.Station;
 import exceptions.BothStationsAlreadyPresentException;
 import exceptions.InvalidFormatException;
 import exceptions.InvalidSubLineException;
 import exceptions.LineFormatException;
 import exceptions.LineNotFoundException;
-import model.RailLine;
-import model.RailwayMap;
-import model.Station;
 import setup.RailwayCreator;
 
 public class RailwayController implements Controller {

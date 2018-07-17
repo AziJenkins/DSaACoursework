@@ -10,14 +10,14 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import OLDmodel.RailLine;
+import OLDmodel.RailwayMap;
+import OLDmodel.Station;
+import OLDmodel.StationReturnPacket;
 import exceptions.BothStationsAlreadyPresentException;
 import exceptions.InvalidFormatException;
 import exceptions.InvalidSubLineException;
 import exceptions.LineNotFoundException;
-import model.RailLine;
-import model.RailwayMap;
-import model.Station;
-import model.StationReturnPacket;
 
 public class RailwayCreator {
 

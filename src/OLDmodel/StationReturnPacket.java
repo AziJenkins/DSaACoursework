@@ -1,4 +1,4 @@
-package model;
+package OLDmodel;
 
 public class StationReturnPacket {
 	public Station station;
