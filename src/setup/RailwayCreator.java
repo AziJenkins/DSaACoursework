@@ -28,6 +28,14 @@ public class RailwayCreator {
 	private RailwayMap map;
 	private HashMap<String, String> stationNames; // <Station, Line>
 
+	/*
+	 * 
+	 * Java passes references!!!!!!!!!!!!!!!!!
+	 * 
+	 * 
+	 * 
+	 */
+
 	public RailwayCreator() throws InvalidFormatException {
 		try {
 			br = new BufferedReader(new FileReader(file));
@@ -48,51 +56,67 @@ public class RailwayCreator {
 		if (!getLine()) {
 			return false;
 		}
-		if(input[2].equals("Lapworth") && input[1].equals("Dorridge")) {
+
+		/*
+		 * get input line does
+		 */
+
+		if (input[1].equals("Birmingham New Street")) {
 			System.out.println("break");
 		}
-		
+
 		Station[] stations = new Station[2];
 		RailLine l = map.getLine(input[0]);
 		boolean isNewSubLine = false;
 		boolean isOldSubline = false;
+		boolean isNewLine = false;
 
 		// does line exist?
 		if (l == null) {
-			// no, create new line and two stations
+			// no, create new line
 			l = new RailLine(input[0]);
-			for (int i = 0; i < 2; i++) {
-				stations[i] = new Station(input[i + 1]);
-				stationNames.put(input[i+1], input[0]);
-			}
+			isNewLine = true;
+			map.addLine(l);
+		}
+		// yes, get station 1
+		StationReturnPacket srp1;
+		if (stationNames.containsKey(input[1])) {
+			srp1 = map.getLine(stationNames.get(input[1])).getStation(input[1]);
 		} else {
-			// yes, get station 1
-				
-			StationReturnPacket srp1 = map.getLine(input[0]).getStation(input[1]);
-			if (srp1 == null) {
+			srp1 = map.getLine(input[0]).getStation(input[1]);
+		}
+		if (srp1 == null) {
+			if (isNewLine) {
+				stations[0] = new Station(input[1], input[0]);
+				stationNames.put(input[1], input[0]);
+				srp1 = new StationReturnPacket(stations[0], false, false);
+			} else {
 				northFacingSubLines.add(input);
 				return true;
 			}
-			isOldSubline = srp1.isOldSubLine;
-			isNewSubLine = srp1.isNewSubLine;
-			stations[0] = srp1.station;
-			// does station 2 exist?
-			if (stationNames.containsKey(input[2])) {
-				// yes, get it
-				StationReturnPacket srp2 = map.getLine(stationNames.get(input[2])).getStation(input[2]);
-				isNewSubLine = false;
-				stations[1] = srp2.station;
-			} else {
-				// no, create it
-				stations[1] = new Station(input[2]);
-				stationNames.put(input[2], input[0]);
-			}
+		}
+
+		isOldSubline = srp1.isOldSubLine;
+		isNewSubLine = srp1.isNewSubLine;
+		stations[0] = srp1.station;
+		l.addStation(stations[0]);
+
+		// does station 2 exist?
+		if (stationNames.containsKey(input[2])) {
+			// yes, get it
+			StationReturnPacket srp2 = map.getLine(stationNames.get(input[2])).getStation(input[2]);
+			isNewSubLine = false;
+			stations[1] = srp2.station;
+		} else {
+			// no, create it
+			stations[1] = new Station(input[2], input[0]);
+			stationNames.put(input[2], input[0]);
 		}
 
 		for (int i = 0; i < 2; i++) {
 			stations[i].addConnection(input[(i * 2 + 2) % 3], Integer.parseInt(input[3]));
+			stations[i].addLine(input[0]);
 		}
-		l.addStation(stations[0]);
 
 		if (isNewSubLine) {
 			l.addNewSubLineStation(input[1], stations[1]);
@@ -102,11 +126,12 @@ public class RailwayCreator {
 			l.addStation(stations[1]);
 		}
 
-	map.addLine(l);
-	return true;
+		map.addLine(l);
+
+		return true;
 
 	}
-	
+
 	public boolean processNorthFacingSubLines() throws InvalidSubLineException {
 		Iterator<String[]> i = northFacingSubLines.descendingIterator();
 		while (i.hasNext()) {
@@ -127,13 +152,13 @@ public class RailwayCreator {
 				stations[1] = srp2.station;
 			} else {
 				// no, create it
-				stations[1] = new Station(input[2]);
+				stations[1] = new Station(input[2], input[0]);
 				stationNames.put(input[2], input[0]);
 			}
 			for (int j = 0; j < 2; j++) {
 				stations[j].addConnection(input[(j * 2 + 2) % 3], Integer.parseInt(input[3]));
+				stations[j].addLine(input[0]);
 			}
-			l.addStation(stations[0]);
 
 			if (isNewSubLine) {
 				l.addNewSubLineStation(input[1], stations[1]);
@@ -143,7 +168,6 @@ public class RailwayCreator {
 				l.addStation(stations[1]);
 			}
 
-		map.addLine(l);
 		}
 		return true;
 	}
@@ -175,8 +199,12 @@ public class RailwayCreator {
 			throw new InvalidFormatException("Fourth heading must equal TRAVEL TIME (MINS)");
 		}
 	}
-	
+
 	public RailwayMap getMap() {
 		return map;
+	}
+
+	public void close() throws IOException {
+		br.close();
 	}
 }

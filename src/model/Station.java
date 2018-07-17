@@ -10,9 +10,10 @@ public class Station {
 	private HashSet<String> lines;
 	private HashMap<String, Integer> connectedStations;
 	
-	public Station(String name) {
+	public Station(String name, String line) {
 		this.name = name;
 		this.lines = new HashSet<String>();
+		addLine(line);
 		this.connectedStations = new HashMap<String, Integer>();
 	}
 	
@@ -32,14 +33,14 @@ public class Station {
 		StringBuilder sb = new StringBuilder();
 		sb.append("\t\t\t\t");
 		sb.append(name);
-		sb.append("\n\t\t\t\t\t\t Lines: \n");
+		sb.append("\r\n\t\t\t\t\t\t Lines: \r\n");
 		Iterator<String> i = lines.iterator();
 		while (i.hasNext()) {
 			sb.append("\t\t\t\t\t\t");
 			sb.append(i.next());
-			sb.append("\n");
+			sb.append("\r\n");
 		}
-		sb.append("\t\t\t\t\t\t\t\t Connected Stations: \n");
+		sb.append("\t\t\t\t\t\t\t\t Connected Stations: \r\n");
 		i = connectedStations.keySet().iterator();
 		while (i.hasNext()) {
 			String station = i.next();
@@ -47,8 +48,16 @@ public class Station {
 			sb.append(station);
 			sb.append(" ");
 			sb.append(connectedStations.get(station));
-			sb.append("\n");
+			sb.append("\r\n");
 		}
 		return sb.toString();
+	}
+	
+	public int getNumberOfLines() {
+		return lines.size();
+	}
+	
+	public int getNumberOfConnections() {
+		return connectedStations.size();
 	}
 }

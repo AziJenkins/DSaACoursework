@@ -1,0 +1,2010 @@
+		 Line : Cross City Line
+ 		 Primary: 
+						Lichfield Trent Valley
+						 Lines: 
+						Cross City Line
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Tamworth  7
+								Lichfield City 4
+								Rugeley Trent Valley  8
+
+						Lichfield City
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Lichfield Trent Valley 4
+								Shenstone 3
+
+						Shenstone
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Lichfield City 3
+								Blake Street 3
+
+						Blake Street
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Shenstone 3
+								Butlers Lane 2
+
+						Butlers Lane
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Four Oaks 3
+								Blake Street 2
+
+						Four Oaks
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Butlers Lane 3
+								Sutton Coldfield 4
+
+						Sutton Coldfield
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Four Oaks 4
+								Wylde Green 2
+
+						Wylde Green
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Chester Road 2
+								Sutton Coldfield 2
+
+						Chester Road
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Erdington 3
+								Wylde Green 2
+
+						Erdington
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Chester Road 3
+								Gravelly Hill 2
+
+						Gravelly Hill
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Aston 4
+								Erdington 2
+
+						Aston
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Duddeston 3
+								Gravelly Hill 4
+
+						Duddeston
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Aston 3
+								Birmingham New Street 7
+
+						Birmingham New Street
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Rugby -- Northampton -- London
+						Cross City Line
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Birmingham International  16
+								Birmingham International 20
+								Smethwick Galton Bridge 7
+								Duddeston 7
+								Five Ways 3
+								Sandwell & Dudley  8
+								University  6
+
+						Five Ways
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								University 4
+								Birmingham New Street 3
+
+						University
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Five Ways 4
+								Selly Oak 3
+
+						Selly Oak
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								University 3
+								Bournville 2
+
+						Bournville
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Selly Oak 2
+								Kings Norton 3
+
+						Kings Norton
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Northfield 3
+								Bournville 3
+
+						Northfield
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Longbridge 3
+								Kings Norton 3
+
+						Longbridge
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Northfield 3
+								Barnt Green 7
+
+						Barnt Green
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Alvechurch 4
+								Longbridge 7
+
+						Alvechurch
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Barnt Green 4
+								Redditch 7
+
+						Redditch
+						 Lines: 
+						Cross City Line
+								 Connected Stations: 
+								Alvechurch 7
+
+
+
+
+
+		 Line : Nuneaton -- Coventry
+ 		 Primary: 
+						Nuneaton 
+						 Lines: 
+						Nuneaton -- Coventry
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Bermuda Park 4
+								Rugby 22
+								Atherstone  5
+
+						Bermuda Park
+						 Lines: 
+						Nuneaton -- Coventry
+								 Connected Stations: 
+								Bedworth 4
+								Nuneaton  4
+
+						Bedworth
+						 Lines: 
+						Nuneaton -- Coventry
+								 Connected Stations: 
+								Bermuda Park 4
+								Coventry Arena 6
+
+						Coventry Arena
+						 Lines: 
+						Nuneaton -- Coventry
+								 Connected Stations: 
+								Coventry  8
+								Bedworth 6
+
+						Coventry 
+						 Lines: 
+						Nuneaton -- Coventry
+								 Connected Stations: 
+								Coventry Arena 8
+
+
+
+
+
+		 Line : Worcester -- Birmingham
+ 		 Primary: 
+						Worcester Foregate Street
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Malvern Link  9
+								Worcester Shrub Hill  4
+								Kidderminster  19
+								Worcester Shrub Hill 3
+
+						Worcester Shrub Hill 
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Worcester Foregate Street 4
+								Droitwich Spa  8
+
+						Droitwich Spa 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Bromsgrove  10
+								Worcester Shrub Hill  8
+								Hartlebury  8
+								Worcester Shrub Hill 8
+
+						Hartlebury 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Kidderminster  5
+								Droitwich Spa  8
+
+						Kidderminster 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Blakedown  4
+								Stourbridge Junction  12
+								Worcester Foregate Street 19
+								Hagley  6
+								Hartlebury  5
+
+						Blakedown 
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Kidderminster  4
+								Hagley  4
+
+						Hagley 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Stourbridge Junction 4
+								Blakedown  4
+								Stourbridge Junction  3
+								Kidderminster  6
+
+						Stourbridge Junction
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Hagley  4
+								Lye  4
+
+						Lye 
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Stourbridge Junction 4
+								Cradley Heath  3
+
+						Cradley Heath 
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Old Hill  3
+								Lye  3
+
+						Old Hill 
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Rowley Regis  4
+								Cradley Heath  3
+
+						Rowley Regis 
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Old Hill  4
+								Langley Green  3
+
+						Langley Green 
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Rowley Regis  3
+								Smethwick Galton Bridge 3
+
+						Smethwick Galton Bridge
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Sandwell & Dudley  3
+								Birmingham New Street 7
+								Langley Green  3
+								The Hawthorns  2
+								Wolverhampton  11
+
+						The Hawthorns 
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Smethwick Galton Bridge 2
+								Jewellery Quarter  4
+
+						Jewellery Quarter 
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Birmingham Snow Hill 4
+								The Hawthorns  4
+
+						Birmingham Snow Hill
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Birmingham -- Dorridge -- Leamington Spa
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Birmingham Moor Street 3
+								Jewellery Quarter  4
+								Stourbridge Junction  29
+
+						Birmingham Moor Street
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Birmingham -- Dorridge -- Leamington Spa
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Birmingham Snow Hill 3
+								Bordesley 1
+								Whitlocks End  21
+								Solihull  6
+								Small Heath  3
+
+						Solihull 
+						 Lines: 
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Birmingham Moor Street 6
+								Dorridge  9
+
+						Whitlocks End 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Stratford-upon-Avon  33
+								Shirley  2
+								Wythall  3
+								Birmingham Moor Street 21
+
+
+
+
+
+		 Subline. Start: Birmingham Moor Street
+		 				Whitlocks End 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Stratford-upon-Avon  33
+								Shirley  2
+								Wythall  3
+								Birmingham Moor Street 21
+
+		 				Stratford-upon-Avon 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Stratford-upon-Avon Parkway 3
+								Whitlocks End  33
+
+		 Line : Birmingham -- Worcester -- Hereford
+ 		 Primary: 
+						Birmingham Moor Street 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Birmingham Snow Hill  4
+
+						Birmingham Snow Hill 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Stourbridge Junction  26
+								Birmingham Moor Street  4
+
+						Stourbridge Junction 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Birmingham Snow Hill 29
+								Birmingham Snow Hill  26
+								Kidderminster  12
+								Hagley  3
+
+						Birmingham New Street
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Rugby -- Northampton -- London
+						Cross City Line
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Birmingham International  16
+								Birmingham International 20
+								Smethwick Galton Bridge 7
+								Duddeston 7
+								Five Ways 3
+								Sandwell & Dudley  8
+								University  6
+
+						University 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Bromsgrove  15
+								Birmingham New Street 6
+
+						Bromsgrove 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								University  15
+								Droitwich Spa  10
+
+						Hagley 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Stourbridge Junction 4
+								Blakedown  4
+								Stourbridge Junction  3
+								Kidderminster  6
+
+						Kidderminster 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Blakedown  4
+								Stourbridge Junction  12
+								Worcester Foregate Street 19
+								Hagley  6
+								Hartlebury  5
+
+						Hartlebury 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Kidderminster  5
+								Droitwich Spa  8
+
+						Droitwich Spa 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Bromsgrove  10
+								Worcester Shrub Hill  8
+								Hartlebury  8
+								Worcester Shrub Hill 8
+
+						Worcester Shrub Hill
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Worcester Foregate Street 3
+								Droitwich Spa  8
+
+						Worcester Foregate Street
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Malvern Link  9
+								Worcester Shrub Hill  4
+								Kidderminster  19
+								Worcester Shrub Hill 3
+
+						Malvern Link 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Worcester Foregate Street 9
+								Great Malvern  3
+
+						Great Malvern 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Malvern Link  3
+								Colwall  5
+
+						Colwall 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Ledbury  9
+								Great Malvern  5
+
+						Ledbury 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Hereford  20
+								Colwall  9
+
+
+
+
+
+		 Subline. Start: Worcester Foregate Street
+		 				Malvern Link 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Worcester Foregate Street 9
+								Great Malvern  3
+
+		 				Great Malvern 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Malvern Link  3
+								Colwall  5
+
+		 				Colwall 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Ledbury  9
+								Great Malvern  5
+
+		 				Ledbury 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Hereford  20
+								Colwall  9
+
+		 				Hereford 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Ledbury  20
+
+		 Subline. Start: Birmingham New Street
+		 				University 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Bromsgrove  15
+								Birmingham New Street 6
+
+		 				Bromsgrove 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								University  15
+								Droitwich Spa  10
+
+		 				Droitwich Spa 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Bromsgrove  10
+								Worcester Shrub Hill  8
+								Hartlebury  8
+								Worcester Shrub Hill 8
+
+		 Subline. Start: Droitwich Spa 
+		 				Worcester Shrub Hill
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+								 Connected Stations: 
+								Worcester Foregate Street 3
+								Droitwich Spa  8
+
+		 				Worcester Foregate Street
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Malvern Link  9
+								Worcester Shrub Hill  4
+								Kidderminster  19
+								Worcester Shrub Hill 3
+
+		 Line : Bletchley -- Bedford
+ 		 Primary: 
+						Bletchley
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Leighton Buzzard 7
+								Fenny Stratford  3
+								Milton Keynes Central 5
+
+						Fenny Stratford 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Bow Brickhill  4
+								Bletchley 3
+
+						Bow Brickhill 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Woburn Sands  4
+								Fenny Stratford  4
+
+						Woburn Sands 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Bow Brickhill  4
+								Aspley Guise  3
+
+						Aspley Guise 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Woburn Sands  3
+								Ridgmont 4
+
+						Ridgmont
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Aspley Guise  4
+								Lidlington  4
+
+						Lidlington 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Ridgmont 4
+								Millbrook  3
+
+						Millbrook 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Stewartby  3
+								Lidlington  3
+
+						Stewartby 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Kempston Hardwick  4
+								Millbrook  3
+
+						Kempston Hardwick 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Stewartby  4
+								Bedford St Johns  4
+
+						Bedford St Johns 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Kempston Hardwick  4
+								Bedford  6
+
+
+
+
+
+		 Subline. Start: Bletchley
+		 				Fenny Stratford 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Bow Brickhill  4
+								Bletchley 3
+
+		 				Bow Brickhill 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Woburn Sands  4
+								Fenny Stratford  4
+
+		 				Woburn Sands 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Bow Brickhill  4
+								Aspley Guise  3
+
+		 				Aspley Guise 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Woburn Sands  3
+								Ridgmont 4
+
+		 				Ridgmont
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Aspley Guise  4
+								Lidlington  4
+
+		 				Lidlington 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Ridgmont 4
+								Millbrook  3
+
+		 				Millbrook 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Stewartby  3
+								Lidlington  3
+
+		 				Stewartby 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Kempston Hardwick  4
+								Millbrook  3
+
+		 				Kempston Hardwick 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Stewartby  4
+								Bedford St Johns  4
+
+		 				Bedford St Johns 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Kempston Hardwick  4
+								Bedford  6
+
+		 				Bedford 
+						 Lines: 
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Bedford St Johns  6
+
+		 Line : Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+ 		 Primary: 
+						Birmingham International 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Coventry 20
+								Birmingham New Street 16
+
+						Birmingham New Street
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Rugby -- Northampton -- London
+						Cross City Line
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Birmingham International  16
+								Birmingham International 20
+								Smethwick Galton Bridge 7
+								Duddeston 7
+								Five Ways 3
+								Sandwell & Dudley  8
+								University  6
+
+						Smethwick Galton Bridge
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Sandwell & Dudley  3
+								Birmingham New Street 7
+								Langley Green  3
+								The Hawthorns  2
+								Wolverhampton  11
+
+						Sandwell & Dudley 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Smethwick Galton Bridge 3
+								Birmingham New Street 8
+								Wolverhampton  12
+
+						Wolverhampton 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Smethwick Galton Bridge 11
+								Telford Central  18
+								Sandwell & Dudley  12
+								Bilbrook  6
+
+						Bilbrook 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Codsall  3
+								Wolverhampton  6
+
+						Codsall 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Albrighton  4
+								Bilbrook  3
+
+						Albrighton 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Codsall  4
+								Cosford  3
+
+						Cosford 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Albrighton  3
+								Shifnal  5
+
+						Shifnal 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Telford Central  6
+								Cosford  5
+
+						Telford Central 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Shrewsbury  20
+								Wolverhampton  18
+								Shifnal  6
+								Oakengates  2
+
+						Oakengates 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Wellington  6
+								Telford Central  2
+
+						Wellington 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Shrewsbury  14
+								Oakengates  6
+
+
+
+
+
+		 Subline. Start: Smethwick Galton Bridge
+		 				Sandwell & Dudley 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Smethwick Galton Bridge 3
+								Birmingham New Street 8
+								Wolverhampton  12
+
+		 Subline. Start: Telford Central 
+		 				Oakengates 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Wellington  6
+								Telford Central  2
+
+		 				Wellington 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Shrewsbury  14
+								Oakengates  6
+
+		 				Shrewsbury 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Wellington  14
+								Telford Central  20
+								Crewe  58
+
+		 Subline. Start: Wolverhampton 
+		 				Bilbrook 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Codsall  3
+								Wolverhampton  6
+
+		 				Codsall 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Albrighton  4
+								Bilbrook  3
+
+		 				Albrighton 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Codsall  4
+								Cosford  3
+
+		 				Cosford 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Albrighton  3
+								Shifnal  5
+
+		 				Shifnal 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+								 Connected Stations: 
+								Telford Central  6
+								Cosford  5
+
+		 				Telford Central 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Shrewsbury  20
+								Wolverhampton  18
+								Shifnal  6
+								Oakengates  2
+
+		 Line : Watford -- St Albans Abbey
+ 		 Primary: 
+						Watford Junction
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Watford -- St Albans Abbey
+								 Connected Stations: 
+								London Euston 20
+								Hemel Hempstead 8
+								Watford North 2
+
+						Watford North
+						 Lines: 
+						Watford -- St Albans Abbey
+								 Connected Stations: 
+								Garston 3
+								Watford Junction 2
+
+						Garston
+						 Lines: 
+						Watford -- St Albans Abbey
+								 Connected Stations: 
+								Bricket Wood 3
+								Watford North 3
+
+						Bricket Wood
+						 Lines: 
+						Watford -- St Albans Abbey
+								 Connected Stations: 
+								Garston 3
+								How Wood 2
+
+						How Wood
+						 Lines: 
+						Watford -- St Albans Abbey
+								 Connected Stations: 
+								Bricket Wood 2
+								Park Street 2
+
+						Park Street
+						 Lines: 
+						Watford -- St Albans Abbey
+								 Connected Stations: 
+								St Albans Abbey 4
+								How Wood 2
+
+						St Albans Abbey
+						 Lines: 
+						Watford -- St Albans Abbey
+								 Connected Stations: 
+								Park Street 4
+
+
+
+
+
+		 Line : Smethwick Galton Bridge Connections
+ 		 Primary: 
+						Liverpool Lime Street
+						 Lines: 
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Liverpool South Parkway 22
+
+						Liverpool South Parkway
+						 Lines: 
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Crewe  33
+								Liverpool Lime Street 22
+
+						Crewe 
+						 Lines: 
+						Smethwick Galton Bridge Connections
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Alsager  9
+								Liverpool South Parkway 33
+								Shrewsbury  58
+
+						Shrewsbury 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Wellington  14
+								Telford Central  20
+								Crewe  58
+
+						Telford Central 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Shrewsbury  20
+								Wolverhampton  18
+								Shifnal  6
+								Oakengates  2
+
+						Wolverhampton 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Smethwick Galton Bridge 11
+								Telford Central  18
+								Sandwell & Dudley  12
+								Bilbrook  6
+
+						Smethwick Galton Bridge
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Sandwell & Dudley  3
+								Birmingham New Street 7
+								Langley Green  3
+								The Hawthorns  2
+								Wolverhampton  11
+
+						Birmingham New Street
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Rugby -- Northampton -- London
+						Cross City Line
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Birmingham International  16
+								Birmingham International 20
+								Smethwick Galton Bridge 7
+								Duddeston 7
+								Five Ways 3
+								Sandwell & Dudley  8
+								University  6
+
+
+
+
+
+		 Subline. Start: Crewe 
+		 				Shrewsbury 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Wellington  14
+								Telford Central  20
+								Crewe  58
+
+		 				Telford Central 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Shrewsbury  20
+								Wolverhampton  18
+								Shifnal  6
+								Oakengates  2
+
+		 				Wolverhampton 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Smethwick Galton Bridge 11
+								Telford Central  18
+								Sandwell & Dudley  12
+								Bilbrook  6
+
+		 				Smethwick Galton Bridge
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Smethwick Galton Bridge Connections
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Sandwell & Dudley  3
+								Birmingham New Street 7
+								Langley Green  3
+								The Hawthorns  2
+								Wolverhampton  11
+
+		 Subline. Start: Birmingham New Street
+		 				Birmingham International
+						 Lines: 
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Birmingham New Street 20
+
+		 Line : Birmingham -- Dorridge -- Leamington Spa
+ 		 Primary: 
+						Birmingham Snow Hill
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Birmingham -- Dorridge -- Leamington Spa
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Birmingham Moor Street 3
+								Jewellery Quarter  4
+								Stourbridge Junction  29
+
+						Birmingham Moor Street
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Birmingham -- Dorridge -- Leamington Spa
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Birmingham Snow Hill 3
+								Bordesley 1
+								Whitlocks End  21
+								Solihull  6
+								Small Heath  3
+
+						Bordesley
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Birmingham Moor Street 1
+								Small Heath 2
+
+						Small Heath
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Tyseley 4
+								Bordesley 2
+
+						Tyseley
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Small Heath 4
+								Acocks Green 3
+
+						Acocks Green
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Tyseley 3
+								Olton 3
+
+						Olton
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Acocks Green 3
+								Solihull 4
+
+						Solihull
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Olton 4
+								Widney Manor 3
+
+						Widney Manor
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Dorridge 5
+								Solihull 3
+
+						Dorridge
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Stratford-upon-Avon Parkway 17
+								Lapworth 4
+								Widney Manor 5
+
+						Stratford-upon-Avon Parkway
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Stratford-upon-Avon  3
+								Wilmcote  3
+								Dorridge 17
+								Stratford-upon-Avon 3
+
+						Stratford-upon-Avon
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Stratford-upon-Avon Parkway 3
+
+						Lapworth
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Hatton 6
+								Dorridge 4
+
+						Hatton
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Warwick 5
+								Lapworth 6
+
+						Warwick
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Hatton 5
+								Leamington Spa 9
+
+
+
+
+
+		 Subline. Start: Dorridge
+		 				Lapworth
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Hatton 6
+								Dorridge 4
+
+		 				Hatton
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Warwick 5
+								Lapworth 6
+
+		 				Warwick
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Hatton 5
+								Leamington Spa 9
+
+		 				Leamington Spa
+						 Lines: 
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Warwick 9
+
+		 Line : Birmingham -- Rugby -- Northampton -- London
+ 		 Primary: 
+						Birmingham New Street
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Rugby -- Northampton -- London
+						Cross City Line
+						Smethwick Galton Bridge Connections
+								 Connected Stations: 
+								Birmingham International  16
+								Birmingham International 20
+								Smethwick Galton Bridge 7
+								Duddeston 7
+								Five Ways 3
+								Sandwell & Dudley  8
+								University  6
+
+						Birmingham International 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Coventry 20
+								Birmingham New Street 16
+
+						Coventry
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Birmingham International  20
+								Rugby 13
+
+						Rugby
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Long Buckby 9
+								Nuneaton  22
+								Coventry 13
+								Northampton 21
+
+						Long Buckby
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Rugby 9
+								Northampton 12
+
+						Northampton
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Wolverton 6
+								Rugby 21
+								Long Buckby 12
+								Milton Keynes Central  23
+
+						Wolverton
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Milton Keynes Central 12
+								Northampton 6
+
+						Milton Keynes Central
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Wolverton 12
+								Bletchley 5
+
+						Bletchley
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Leighton Buzzard 7
+								Fenny Stratford  3
+								Milton Keynes Central 5
+
+						Leighton Buzzard
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Berkhamsted 12
+								Bletchley 7
+
+						Berkhamsted
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Leighton Buzzard 12
+								Hemel Hempstead 5
+
+						Hemel Hempstead
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Berkhamsted 5
+								Watford Junction 8
+
+						Watford Junction
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Watford -- St Albans Abbey
+								 Connected Stations: 
+								London Euston 20
+								Hemel Hempstead 8
+								Watford North 2
+
+
+
+
+
+		 Subline. Start: Birmingham New Street
+		 				Birmingham International 
+						 Lines: 
+						Birmingham -- Wolverhampton -- Telford -- Shrewsbury
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Coventry 20
+								Birmingham New Street 16
+
+		 				Coventry
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Birmingham International  20
+								Rugby 13
+
+		 				Rugby
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Long Buckby 9
+								Nuneaton  22
+								Coventry 13
+								Northampton 21
+
+		 				Long Buckby
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Rugby 9
+								Northampton 12
+
+		 				Northampton
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Wolverton 6
+								Rugby 21
+								Long Buckby 12
+								Milton Keynes Central  23
+
+		 				Wolverton
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Milton Keynes Central 12
+								Northampton 6
+
+		 				Milton Keynes Central
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Wolverton 12
+								Bletchley 5
+
+		 				Bletchley
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Bletchley -- Bedford
+								 Connected Stations: 
+								Leighton Buzzard 7
+								Fenny Stratford  3
+								Milton Keynes Central 5
+
+		 				Leighton Buzzard
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Berkhamsted 12
+								Bletchley 7
+
+		 				Berkhamsted
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Leighton Buzzard 12
+								Hemel Hempstead 5
+
+		 				Hemel Hempstead
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Berkhamsted 5
+								Watford Junction 8
+
+		 				Watford Junction
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Watford -- St Albans Abbey
+								 Connected Stations: 
+								London Euston 20
+								Hemel Hempstead 8
+								Watford North 2
+
+		 				London Euston
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+								 Connected Stations: 
+								Watford Junction 20
+
+		 Line : Crewe -- Stoke -- Stafford -- London
+ 		 Primary: 
+						Crewe 
+						 Lines: 
+						Smethwick Galton Bridge Connections
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Alsager  9
+								Liverpool South Parkway 33
+								Shrewsbury  58
+
+						Alsager 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Crewe  9
+								Kidsgrove  4
+
+						Kidsgrove 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Alsager  4
+								Stoke-on-Trent  5
+
+						Stoke-on-Trent 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Stone  8
+								Kidsgrove  5
+
+						Stone 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Stoke-on-Trent  8
+								Stafford 12
+
+						Stafford
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Stone  12
+								Rugeley Trent Valley  3
+
+						Rugeley Trent Valley 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Lichfield Trent Valley 8
+								Stafford 3
+
+						Lichfield Trent Valley
+						 Lines: 
+						Cross City Line
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Tamworth  7
+								Lichfield City 4
+								Rugeley Trent Valley  8
+
+						Tamworth 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Lichfield Trent Valley 7
+								Polesworth  8
+
+						Polesworth 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Tamworth  8
+								Atherstone  7
+
+						Atherstone 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Nuneaton  5
+								Polesworth  7
+
+						Nuneaton 
+						 Lines: 
+						Nuneaton -- Coventry
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Bermuda Park 4
+								Rugby 22
+								Atherstone  5
+
+						Rugby
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Long Buckby 9
+								Nuneaton  22
+								Coventry 13
+								Northampton 21
+
+						Northampton
+						 Lines: 
+						Birmingham -- Rugby -- Northampton -- London
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Wolverton 6
+								Rugby 21
+								Long Buckby 12
+								Milton Keynes Central  23
+
+						Milton Keynes Central 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Watford Junction  30
+								Northampton 23
+
+						Watford Junction 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Milton Keynes Central  30
+								London Euston  19
+
+
+
+
+
+		 Subline. Start: Lichfield Trent Valley
+		 				Tamworth 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Lichfield Trent Valley 7
+								Polesworth  8
+
+		 				Polesworth 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Tamworth  8
+								Atherstone  7
+
+		 				Atherstone 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Nuneaton  5
+								Polesworth  7
+
+		 				Nuneaton 
+						 Lines: 
+						Nuneaton -- Coventry
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Bermuda Park 4
+								Rugby 22
+								Atherstone  5
+
+		 Subline. Start: Northampton
+		 				Milton Keynes Central 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Watford Junction  30
+								Northampton 23
+
+		 				Watford Junction 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Milton Keynes Central  30
+								London Euston  19
+
+		 				London Euston 
+						 Lines: 
+						Crewe -- Stoke -- Stafford -- London
+								 Connected Stations: 
+								Watford Junction  19
+
+		 Line : Birmingham -- Stratford-upon-Avon
+ 		 Primary: 
+						Worcester Foregate Street
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Malvern Link  9
+								Worcester Shrub Hill  4
+								Kidderminster  19
+								Worcester Shrub Hill 3
+
+						Kidderminster 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Blakedown  4
+								Stourbridge Junction  12
+								Worcester Foregate Street 19
+								Hagley  6
+								Hartlebury  5
+
+						Stourbridge Junction 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Birmingham Snow Hill 29
+								Birmingham Snow Hill  26
+								Kidderminster  12
+								Hagley  3
+
+						Birmingham Snow Hill
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Birmingham -- Dorridge -- Leamington Spa
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Birmingham Moor Street 3
+								Jewellery Quarter  4
+								Stourbridge Junction  29
+
+						Birmingham Moor Street
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Birmingham -- Dorridge -- Leamington Spa
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Birmingham Snow Hill 3
+								Bordesley 1
+								Whitlocks End  21
+								Solihull  6
+								Small Heath  3
+
+						Small Heath 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Tyseley  4
+								Birmingham Moor Street 3
+
+						Tyseley 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Small Heath  4
+								Spring Road  2
+
+						Spring Road 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Tyseley  2
+								Hall Green  3
+
+						Hall Green 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Yardley Wood  2
+								Spring Road  3
+
+						Yardley Wood 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Shirley  4
+								Hall Green  2
+
+						Shirley 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Whitlocks End  2
+								Yardley Wood  4
+
+						Whitlocks End 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Stratford-upon-Avon  33
+								Shirley  2
+								Wythall  3
+								Birmingham Moor Street 21
+
+						Wythall 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Earlswood  2
+								Whitlocks End  3
+
+						Earlswood 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Wythall  2
+								The Lakes  3
+
+						The Lakes 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Earlswood  3
+								Wood End  2
+
+						Wood End 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								The Lakes  2
+								Danzey  3
+
+						Danzey 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Henley-in-Arden  5
+								Wood End  3
+
+						Henley-in-Arden 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Wootton Wawen  3
+								Danzey  5
+
+						Wootton Wawen 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Henley-in-Arden  3
+								Wilmcote  6
+
+						Wilmcote 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Wootton Wawen  6
+								Stratford-upon-Avon Parkway 3
+
+						Stratford-upon-Avon Parkway
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Birmingham -- Dorridge -- Leamington Spa
+								 Connected Stations: 
+								Stratford-upon-Avon  3
+								Wilmcote  3
+								Dorridge 17
+								Stratford-upon-Avon 3
+
+						Stratford-upon-Avon 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Stratford-upon-Avon Parkway 3
+								Whitlocks End  33
+
+
+
+
+
+		 Subline. Start: Birmingham Moor Street
+		 				Small Heath 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Tyseley  4
+								Birmingham Moor Street 3
+
+		 				Tyseley 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Small Heath  4
+								Spring Road  2
+
+		 				Spring Road 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Tyseley  2
+								Hall Green  3
+
+		 				Hall Green 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Yardley Wood  2
+								Spring Road  3
+
+		 				Yardley Wood 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Shirley  4
+								Hall Green  2
+
+		 				Shirley 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Whitlocks End  2
+								Yardley Wood  4
+
+		 				Whitlocks End 
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Stratford-upon-Avon  33
+								Shirley  2
+								Wythall  3
+								Birmingham Moor Street 21
+
+		 Subline. Start: Kidderminster 
+		 				Stourbridge Junction 
+						 Lines: 
+						Birmingham -- Worcester -- Hereford
+						Birmingham -- Stratford-upon-Avon
+								 Connected Stations: 
+								Birmingham Snow Hill 29
+								Birmingham Snow Hill  26
+								Kidderminster  12
+								Hagley  3
+
+		 				Birmingham Snow Hill
+						 Lines: 
+						Birmingham -- Stratford-upon-Avon
+						Birmingham -- Dorridge -- Leamington Spa
+						Worcester -- Birmingham
+								 Connected Stations: 
+								Birmingham Moor Street 3
+								Jewellery Quarter  4
+								Stourbridge Junction  29
+
+

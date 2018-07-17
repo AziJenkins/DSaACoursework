@@ -1,7 +1,7 @@
 /**
  * 
  */
-package wmr;
+package controller;
 
 /**
  * A controller for the West Midlands Railway Information Centre system.

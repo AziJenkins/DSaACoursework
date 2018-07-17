@@ -7,6 +7,7 @@ import exceptions.LineNotFoundException;
 import setup.RailwayCreator;
 import java.io.EOFException;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class TestRailwayCreator {
 
@@ -19,6 +20,9 @@ public class TestRailwayCreator {
 		while(willContinue) {
 			willContinue = rwc.processInputLine();
 		}
-		System.out.println(rwc.getMap());
+		rwc.close();
+		PrintWriter pw = new PrintWriter("Output.txt", "UTF-8");
+		pw.println(rwc.getMap().toString());
+		pw.close();
 	}
 }

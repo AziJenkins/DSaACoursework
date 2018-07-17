@@ -37,4 +37,10 @@ public class RailwayMap {
 		}
 		return sb.toString();
 	}
+
+	public void getLineByStation(String station) {
+		for (RailLine line: lines) {
+			if (line.)
+		}
+	}
 }
