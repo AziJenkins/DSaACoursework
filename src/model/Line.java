@@ -38,7 +38,7 @@ public class Line {
 
 	public String toString() {
 		Map<String, List<Station>> map = getLine(new HashSet<Station>(), termini.iterator().next(),
-				new HashMap<String, List<Station>>(), "start");
+				new HashMap<String, List<Station>>(), "start"); //get the lines
 		Object[] keySet = map.keySet().toArray();
 		String[] keys = new String[keySet.length - 1];
 		for (int i = 0; i < keySet.length; i++) {
@@ -47,7 +47,7 @@ public class Line {
 				keys[j] = (String) keySet[i];
 				j++;
 			}
-		}
+		} //remove main line
 
 		int maxSize = 0;
 		for (List<Station> line : map.values()) {
@@ -60,7 +60,7 @@ public class Line {
 			arrayMap[i][0] = mainLine.get(i).getName();
 			for (int j = 0; j < keys.length; j++) {
 				String startPoint = (String) keys[j];
-				if (startPoint.equals(arrayMap[i][0])) {
+				if (startPoint != null && startPoint.equals(arrayMap[i][0])) {
 					int index = 0;
 					for (Station s : map.get(startPoint)) {
 						arrayMap[i + index][j + 1] = s.getName();
