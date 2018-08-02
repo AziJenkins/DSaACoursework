@@ -1,34 +1,37 @@
 package model;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Station {
 
 	private String name;
-	private List<Link> links;
-
+	private HashSet<Line> lines;
+	private HashMap<String, Integer> distanceTo;
+	
 	public Station(String name) {
 		this.name = name;
-		links = new LinkedList<Link>();
+		lines = new HashSet<Line>();
+		distanceTo = new HashMap<String, Integer>();
+	}
+	
+	public void addLine(Line l) {
+		lines.add(l);
 	}
 	
 	public String getName() {
 		return name;
 	}
 	
-	public void addLink(Link l) {
-		links.add(l);
+	public HashSet<Line> getLines() {
+		return lines;
 	}
-
-	public List<Link> getNextLinks(String line, Set<Station> previousStations) {
-		List<Link> nextLinks = new LinkedList<Link>();
-		for (Link l : links) {
-			if (l.getLine().getName().equals(line) && !previousStations.contains(l.getToStation())) {
-				nextLinks.add(l);
-			}
-		}
-		return nextLinks;
+	
+	public void addConntection(String toStation, Integer distance) {
+		distanceTo.put(toStation, distance);
+	}
+	
+	public int getDistanceTo(Station s) {
+		return distanceTo.get(s);
 	}
 }

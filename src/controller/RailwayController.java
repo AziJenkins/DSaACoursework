@@ -1,65 +1,27 @@
 package controller;
 
-import java.io.IOException;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
 
-import OLDmodel.RailLine;
-import OLDmodel.RailwayMap;
-import OLDmodel.Station;
-import exceptions.BothStationsAlreadyPresentException;
-import exceptions.InvalidFormatException;
-import exceptions.InvalidSubLineException;
-import exceptions.LineFormatException;
-import exceptions.LineNotFoundException;
-import setup.RailwayCreator;
+import model.Line;
+import model.Map;
+import model.Station;
 
 public class RailwayController implements Controller {
 
-	private RailwayMap map;
+	private Map map;
 	
-	public RailwayController() {
-		try {
-			RailwayCreator rwc = new RailwayCreator();
-			boolean cont = true;
-			while(cont) {
-				rwc.processInputLine();
-			}
-			map = rwc.getMap();
-		} catch (InvalidFormatException e) {
-			e.printStackTrace();
-		} catch (LineNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (BothStationsAlreadyPresentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvalidSubLineException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-				
-	} 
-	
+	public RailwayController(Map map) {
+		this.map = map;
+	}
+
 	@Override
 	public String listAllTermini(String line) {
 		StringBuilder sb = new StringBuilder();
-		RailLine l = map.getLine(line);
-		List<Station> termini = null;
-		try {
-			termini = l.getTermini();
-		} catch (LineFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		Iterator<Station> i = termini.iterator();
-		while(i.hasNext()) {
-			sb.append(i.next().getName());
+		Iterator<Station> it = map.getLineByName(line).getTermini().iterator();
+		while (it.hasNext()) {
+			sb.append(it.next().getName());
 			sb.append("\n");
 		}
 		return sb.toString();
@@ -67,26 +29,44 @@ public class RailwayController implements Controller {
 
 	@Override
 	public String listStationsInLine(String line) {
-		RailLine l = map.getLine(line);
-		return l.toString();
+		return map.getLineByName(line).toString();
 	}
 
 	@Override
 	public String showPathBetween(String stationA, String stationB) {
-		Station sA;
-		Station sB;
-		Set<RailLine> aLines;
-		Set<RailLine> bLines;
-		
-		Set<RailLine> intersectLines = aLines;
-		intersectLines.retainAll(bLines);
-		
-		if(intersectLines.isEmpty()) {
-			for(RailLine line: aLines) {
-				
+		Station stA = map.getStationByName(stationA);
+		Station stB = map.getStationByName(stationB);
+		HashSet<Line> linesA = (HashSet<Line>) stA.getLines().clone();
+		HashSet<Line> linesB = (HashSet<Line>) stB.getLines().clone();
+
+		// check if they share a line
+		if (!Collections.disjoint(linesA, linesB)) {
+			for (Line l : linesA) {
+				if (linesB.contains(l)) {
+					return l.getPathBetween(stA, stB);
+				}
 			}
 		}
 
+		for (Line l : linesA) {
+			if (!Collections.disjoint(l.getIntersections().values(), linesB)) {
+				for (String s: l.getIntersections().keySet()) {
+					if (linesB.contains(l.getIntersections().get(s))) {
+						return l.getPathBetween(stA, map.getStationByName(s)) + l.getIntersections().get(s).getPathBetween(map.getStationByName(s), stB);
+					}
+				}
+			}
+		}
+		for (Line l : linesB) {
+			if (!Collections.disjoint(l.getIntersections().values(), linesA)) {
+				for (String s: l.getIntersections().keySet()) {
+					if (linesA.contains(l.getIntersections().get(s))) {
+						return l.getPathBetween(stA, map.getStationByName(s)) + l.getIntersections().get(s).getPathBetween(map.getStationByName(s), stB);
+					}
+				}
+			}
+		}
+		return "Could not find a path";
 	}
 
 }

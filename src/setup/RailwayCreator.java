@@ -9,15 +9,14 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
-
-import OLDmodel.RailLine;
-import OLDmodel.RailwayMap;
-import OLDmodel.Station;
-import OLDmodel.StationReturnPacket;
 import exceptions.BothStationsAlreadyPresentException;
 import exceptions.InvalidFormatException;
 import exceptions.InvalidSubLineException;
 import exceptions.LineNotFoundException;
+import exceptions.PreviousNotFoundException;
+import model.Line;
+import model.Map;
+import model.Station;
 
 public class RailwayCreator {
 
@@ -25,8 +24,9 @@ public class RailwayCreator {
 	private BufferedReader br;
 	private String[] input;
 	private LinkedList<String[]> northFacingSubLines;
-	private RailwayMap map;
-	private HashMap<String, String> stationNames; // <Station, Line>
+	private Map map;
+	private HashMap<String, Station> stations;
+	private HashMap<String, Line> lines;
 
 	/*
 	 * 
@@ -45,134 +45,82 @@ public class RailwayCreator {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		map = new RailwayMap();
-		stationNames = new HashMap<String, String>();
+		map = new Map();
+		stations = new HashMap<String, Station>();
 		northFacingSubLines = new LinkedList<String[]>();
+		lines = new HashMap<String, Line>();
+	}
+	
+	public Map processFile() throws IOException, PreviousNotFoundException {
+		while(processInputLine());
+		processNorthFacingSubLines();
+		close();
+		return map;
 	}
 
-	public boolean processInputLine()
-			throws LineNotFoundException, BothStationsAlreadyPresentException, IOException, InvalidSubLineException {
+	private boolean processInputLine() throws IOException, PreviousNotFoundException {
 
 		if (!getLine()) {
 			return false;
 		}
-
-		/*
-		 * get input line does
-		 */
-
-		if (input[1].equals("Birmingham New Street")) {
-			System.out.println("break");
+		for (int i = 0; i < input.length; i++) {
+			input[i] = input[i].trim();
 		}
-
-		Station[] stations = new Station[2];
-		RailLine l = map.getLine(input[0]);
-		boolean isNewSubLine = false;
-		boolean isOldSubline = false;
-		boolean isNewLine = false;
-
-		// does line exist?
+		
+		Station fromStation = stations.get(input[1]);
+		if (fromStation == null) {
+			fromStation = new Station(input[1]);
+		}
+		Station toStation = stations.get(input[2]);
+		if (toStation == null) {
+			toStation = new Station(input[2]);
+		}
+		fromStation.addConntection(toStation.getName(), Integer.getInteger(input[3]));
+		toStation.addConntection(fromStation.getName(), Integer.getInteger(input[3]));
+		Line l = lines.get(input[0]);
 		if (l == null) {
-			// no, create new line
-			l = new RailLine(input[0]);
-			isNewLine = true;
-			map.addLine(l);
+			l = new Line(input[0], fromStation);
+			lines.put(l.getName(), l);
+		} else if (!l.contains(input[1])) {
+			northFacingSubLines.add(input);
+			return true;
 		}
-		// yes, get station 1
-		StationReturnPacket srp1;
-		if (stationNames.containsKey(input[1])) {
-			srp1 = map.getLine(stationNames.get(input[1])).getStation(input[1]);
-		} else {
-			srp1 = map.getLine(input[0]).getStation(input[1]);
-		}
-		if (srp1 == null) {
-			if (isNewLine) {
-				stations[0] = new Station(input[1], input[0]);
-				stationNames.put(input[1], input[0]);
-				srp1 = new StationReturnPacket(stations[0], false, false);
-			} else {
-				northFacingSubLines.add(input);
-				return true;
-			}
-		}
-
-		isOldSubline = srp1.isOldSubLine;
-		isNewSubLine = srp1.isNewSubLine;
-		stations[0] = srp1.station;
-		l.addStation(stations[0]);
-
-		// does station 2 exist?
-		if (stationNames.containsKey(input[2])) {
-			// yes, get it
-			StationReturnPacket srp2 = map.getLine(stationNames.get(input[2])).getStation(input[2]);
-			isNewSubLine = false;
-			stations[1] = srp2.station;
-		} else {
-			// no, create it
-			stations[1] = new Station(input[2], input[0]);
-			stationNames.put(input[2], input[0]);
-		}
-
-		for (int i = 0; i < 2; i++) {
-			stations[i].addConnection(input[(i * 2 + 2) % 3], Integer.parseInt(input[3]));
-			stations[i].addLine(input[0]);
-		}
-
-		if (isNewSubLine) {
-			l.addNewSubLineStation(input[1], stations[1]);
-		} else if (isOldSubline) {
-			l.addSubLineStation(input[1], stations[1]);
-		} else {
-			l.addStation(stations[1]);
-		}
-
+		l.addStation(toStation, fromStation.getName());
+		stations.put(fromStation.getName(), fromStation);
+		stations.put(toStation.getName(), toStation);
 		map.addLine(l);
-
 		return true;
-
 	}
 
-	public boolean processNorthFacingSubLines() throws InvalidSubLineException {
+	private boolean processNorthFacingSubLines() throws PreviousNotFoundException {
 		Iterator<String[]> i = northFacingSubLines.descendingIterator();
 		while (i.hasNext()) {
-			String[] input = i.next();
-			Station[] stations = new Station[2];
-			RailLine l = map.getLine(input[0]);
-			boolean isNewSubLine = false;
-			boolean isOldSubline = false;
-			StationReturnPacket srp1 = map.getLine(input[0]).getStation(input[1]);
-			isNewSubLine = srp1.isNewSubLine;
-			stations[0] = srp1.station;
-			// does station 2 exist?
-			if (stationNames.containsKey(input[2])) {
-				// yes, get it
-				StationReturnPacket srp2 = map.getLine(stationNames.get(input[2])).getStation(input[2]);
-				isOldSubline = srp2.isOldSubLine;
-				isNewSubLine = false;
-				stations[1] = srp2.station;
-			} else {
-				// no, create it
-				stations[1] = new Station(input[2], input[0]);
-				stationNames.put(input[2], input[0]);
-			}
-			for (int j = 0; j < 2; j++) {
-				stations[j].addConnection(input[(j * 2 + 2) % 3], Integer.parseInt(input[3]));
-				stations[j].addLine(input[0]);
-			}
+			input = i.next();
 
-			if (isNewSubLine) {
-				l.addNewSubLineStation(input[1], stations[1]);
-			} else if (isOldSubline) {
-				l.addSubLineStation(input[1], stations[1]);
-			} else {
-				l.addStation(stations[1]);
+			Station fromStation = stations.get(input[2]);
+			if (fromStation == null) {
+				fromStation = new Station(input[2]);
+				stations.put(fromStation.getName(), fromStation);
 			}
-
+			Station toStation = stations.get(input[1]);
+			if (toStation == null) {
+				toStation = new Station(input[1]);
+				stations.put(toStation.getName(), toStation);
+			}
+			fromStation.addConntection(toStation.getName(), Integer.getInteger(input[3]));
+			toStation.addConntection(fromStation.getName(), Integer.getInteger(input[3]));
+			Line l = lines.get(input[0]);
+			if (l == null) {
+				l = new Line(input[0], fromStation);
+				lines.put(l.getName(), l);
+			}
+			l.addStation(toStation, fromStation.getName());
+			map.addLine(l);
 		}
 		return true;
 	}
 
-	public boolean getLine() throws IOException {
+	private boolean getLine() throws IOException {
 		String line = br.readLine();
 		if (line == null) {
 			return false;
@@ -200,11 +148,7 @@ public class RailwayCreator {
 		}
 	}
 
-	public RailwayMap getMap() {
-		return map;
-	}
-
-	public void close() throws IOException {
+	private void close() throws IOException {
 		br.close();
 	}
 }

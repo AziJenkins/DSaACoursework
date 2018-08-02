@@ -1,7 +1,7 @@
 package controller;
 
-import model.Map;
-import model.Station;
+import modelOLD.Map;
+import modelOLD.Station;
 
 public class MapController implements Controller {
 

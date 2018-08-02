@@ -1,31 +1,47 @@
 package model;
 
 import java.util.HashMap;
-import java.util.Set;
+import java.util.HashSet;
+import java.util.LinkedList;
+
+import exceptions.PreviousNotFoundException;
 
 public class Map {
 
-	private HashMap<String, Line> lines;
-	private HashMap<String, Station> stations;
+	public HashSet<Line> lines;
+	public HashMap<String, Station> stations;
 	
 	public Map() {
-		lines = new HashMap<String, Line>();
+		lines = new HashSet<Line>();
 		stations = new HashMap<String, Station>();
 	}
 	
-	public Line getLine(String line) {
-		return lines.get(line);
+	public void addLine(Line l) {
+		lines.add(l);
+		for (Station s: l.getStations()) {
+			stations.put(s.getName(), s);
+		}
 	}
-
-	public Object getPathBetween(String stationA, String stationB) {
-		// TODO Auto-generated method stub
+	
+	public Line getLineByName(String name) {
+		for (Line l: lines) {
+			if (l.getName().equals(name)) {
+				return l;
+			}
+		}
 		return null;
 	}
 	
-	public void addLine(Line line) {
-		lines.put(line.getName(), line);
-		for (Station s: line.getStations()) {
-			stations.put(s.getName(), s);
+	public Station getStationByName(String name) {
+		return stations.get(name);
+	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for (Line l: lines) {
+			sb.append(l.toString());
+			sb.append("\r\n");
 		}
+		return sb.toString();
 	}
 }

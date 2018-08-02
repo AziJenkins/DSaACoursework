@@ -2,9 +2,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import controller.MapController;
-import model.Line;
-import model.Link;
-import model.Station;
+import modelOLD.Line;
+import modelOLD.Link;
+import modelOLD.Station;
 
 public class TestMapController {
 
