@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 
+import exceptions.BothStationsNotPresentException;
 import model.Line;
 import model.Map;
 import model.Station;
@@ -69,4 +70,7 @@ public class RailwayController implements Controller {
 		return "Could not find a path";
 	}
 
+	public Map getMap() {
+		return map;
+	}
 }

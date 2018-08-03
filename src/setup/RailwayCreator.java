@@ -75,8 +75,8 @@ public class RailwayCreator {
 		if (toStation == null) {
 			toStation = new Station(input[2]);
 		}
-		fromStation.addConntection(toStation.getName(), Integer.getInteger(input[3]));
-		toStation.addConntection(fromStation.getName(), Integer.getInteger(input[3]));
+		fromStation.addConntection(toStation.getName(), Integer.parseInt(input[3]));
+		toStation.addConntection(fromStation.getName(), Integer.parseInt(input[3]));
 		Line l = lines.get(input[0]);
 		if (l == null) {
 			l = new Line(input[0], fromStation);
@@ -107,8 +107,8 @@ public class RailwayCreator {
 				toStation = new Station(input[1]);
 				stations.put(toStation.getName(), toStation);
 			}
-			fromStation.addConntection(toStation.getName(), Integer.getInteger(input[3]));
-			toStation.addConntection(fromStation.getName(), Integer.getInteger(input[3]));
+			fromStation.addConntection(toStation.getName(), Integer.parseInt(input[3]));
+			toStation.addConntection(fromStation.getName(), Integer.parseInt(input[3]));
 			Line l = lines.get(input[0]);
 			if (l == null) {
 				l = new Line(input[0], fromStation);
@@ -151,4 +151,5 @@ public class RailwayCreator {
 	private void close() throws IOException {
 		br.close();
 	}
+
 }

@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
+import exceptions.BothStationsNotPresentException;
 import exceptions.PreviousNotFoundException;
 
 public class Line {
@@ -26,6 +27,7 @@ public class Line {
 		termini = new HashSet<Station>();
 		termini.add(start);
 		intersections = new HashMap<String, Line>();
+		start.addLine(this);
 	}
 
 	public void addStation(Station s, String previous) throws PreviousNotFoundException {
@@ -37,6 +39,11 @@ public class Line {
 				ls.add(s);
 				stations.put(s.getName(), s);
 				termini.add(s);
+				for (Line l: s.getLines()) {
+					if (l != this) {
+						intersections.put(s.getName(), l);
+					}
+				}
 				s.addLine(this);
 				return;
 			}
@@ -82,24 +89,36 @@ public class Line {
 			int indexB = ls.getStations().indexOf(sB);
 			if (indexA > -1 && indexB > -1) {
 				int firstIndex = Math.min(indexA, indexB);
-				for (int i = firstIndex; i < Math.max(indexA, indexB); i++) {
+				int lastIndex = Math.max(indexA,  indexB);
+				for (int i = firstIndex; i < lastIndex; i++) {
 					sb.append(ls.getStations().get(i).getName());
 					sb.append("\n");
+					sb.append(ls.getStations().get(i).getDistanceTo(ls.getStations().get(i+1)));
+					sb.append("\n");
 				}
+				sb.append(ls.getStations().get(lastIndex).getName());
 				break;
 			} else {
 				int onlyIndex = Math.max(indexA, indexB);
 				if (onlyIndex > -1) {
 					if (!foundFirst) {
-						for (int i = onlyIndex; i < -1; i--) {
+						for (int i = onlyIndex; i > 0; i--) { //TODO this should not apply if its on the main line. need to wait until subline is found then append to that station
 							sb.append(ls.getStations().get(i).getName());
 							sb.append("\n");
+							sb.append(ls.getStations().get(i).getDistanceTo((ls.getStations().get(i-1))));
+							sb.append("\n");
 						}
+						sb.append(ls.getStations().get(0).getName());
+						sb.append("\n");
+						//TODO append distance here
 					} else {
-						for (int i = 0; i < onlyIndex + 1; i++) {
+						for (int i = 0; i < onlyIndex; i++) {
 							sb.append(ls.getStations().get(i).getName());
 							sb.append("\n");
+							sb.append(ls.getStations().get(i).getDistanceTo((ls.getStations().get(i+1))));
+							sb.append("\n");
 						}
+						sb.append(ls.getStations().get(onlyIndex).getName());
 					}
 					foundFirst = true;
 				}

@@ -1,7 +1,9 @@
 package model;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Set;
 
 public class Station {
 
@@ -32,6 +34,10 @@ public class Station {
 	}
 	
 	public int getDistanceTo(Station s) {
-		return distanceTo.get(s);
+		return distanceTo.get(s.name);
+	}
+	
+	public HashMap<String, Integer> getConnections() {
+		return distanceTo;
 	}
 }
