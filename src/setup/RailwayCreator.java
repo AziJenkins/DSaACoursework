@@ -36,25 +36,28 @@ public class RailwayCreator {
 	 * 
 	 */
 
-	public RailwayCreator() throws InvalidFormatException {
-		try {
-			br = new BufferedReader(new FileReader(file));
-			checkFormat(br.readLine().split(","));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+	public RailwayCreator(String file) throws InvalidFormatException, FileNotFoundException, IOException {
+		if (!file.isEmpty()) {
+			this.file = file;
+		} else {
+			System.out.println("Using default file : src/WestMidlandsRailway.csv");
 		}
+
+		br = new BufferedReader(new FileReader(this.file));
+		checkFormat(br.readLine().split(","));
+
 		map = new Map();
 		stations = new HashMap<String, Station>();
 		northFacingSubLines = new LinkedList<String[]>();
 		lines = new HashMap<String, Line>();
 	}
-	
+
 	public Map processFile() throws IOException, PreviousNotFoundException {
-		while(processInputLine());
+		while (processInputLine())
+			;
 		processNorthFacingSubLines();
 		close();
+		map.recordIntersections();
 		return map;
 	}
 
@@ -66,7 +69,7 @@ public class RailwayCreator {
 		for (int i = 0; i < input.length; i++) {
 			input[i] = input[i].trim();
 		}
-		
+
 		Station fromStation = stations.get(input[1]);
 		if (fromStation == null) {
 			fromStation = new Station(input[1]);

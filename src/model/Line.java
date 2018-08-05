@@ -16,7 +16,7 @@ public class Line {
 	private ArrayList<LineSegment> segments;
 	private HashMap<String, Station> stations;
 	private HashSet<Station> termini;
-	private HashMap<String, Line> intersections;
+	private HashMap<Line, Station> intersections;
 
 	public Line(String name, Station start) {
 		this.name = name;
@@ -26,7 +26,7 @@ public class Line {
 		stations.put(start.getName(), start);
 		termini = new HashSet<Station>();
 		termini.add(start);
-		intersections = new HashMap<String, Line>();
+		intersections = new HashMap<Line, Station>();
 		start.addLine(this);
 	}
 
@@ -39,11 +39,6 @@ public class Line {
 				ls.add(s);
 				stations.put(s.getName(), s);
 				termini.add(s);
-				for (Line l: s.getLines()) {
-					if (l != this) {
-						intersections.put(s.getName(), l);
-					}
-				}
 				s.addLine(this);
 				return;
 			}
@@ -56,7 +51,7 @@ public class Line {
 		s.addLine(this);
 
 	}
-	
+
 	public ArrayList<LineSegment> getSegments() {
 		return segments;
 	}
@@ -69,61 +64,81 @@ public class Line {
 		return name;
 	}
 
-	public HashMap<String, Line> getIntersections() {
+	public HashMap<Line, Station> getIntersections() {
 		return intersections;
 	}
 
 	public Collection<Station> getStations() {
 		return stations.values();
 	}
-	
+
 	public boolean contains(String station) {
 		return stations.keySet().contains(station);
 	}
 
 	public String getPathBetween(Station sA, Station sB) {
+		LineSegment mainSegment = segments.get(0);
 		StringBuilder sb = new StringBuilder();
-		boolean foundFirst = false;
+		int finalIndexA = -1;
+		LineSegment segA = null;
+		int finalIndexB = -1;
+		LineSegment segB = null;
 		for (LineSegment ls : segments) {
 			int indexA = ls.getStations().indexOf(sA);
 			int indexB = ls.getStations().indexOf(sB);
-			if (indexA > -1 && indexB > -1) {
-				int firstIndex = Math.min(indexA, indexB);
-				int lastIndex = Math.max(indexA,  indexB);
-				for (int i = firstIndex; i < lastIndex; i++) {
-					sb.append(ls.getStations().get(i).getName());
-					sb.append("\n");
-					sb.append(ls.getStations().get(i).getDistanceTo(ls.getStations().get(i+1)));
-					sb.append("\n");
-				}
-				sb.append(ls.getStations().get(lastIndex).getName());
-				break;
+			if (indexA > -1 && indexB > -1) { // both found on same segment
+				return sb.append(tracePathBetween(indexA, indexB, ls)).toString();
 			} else {
-				int onlyIndex = Math.max(indexA, indexB);
-				if (onlyIndex > -1) {
-					if (!foundFirst) {
-						for (int i = onlyIndex; i > 0; i--) { //TODO this should not apply if its on the main line. need to wait until subline is found then append to that station
-							sb.append(ls.getStations().get(i).getName());
-							sb.append("\n");
-							sb.append(ls.getStations().get(i).getDistanceTo((ls.getStations().get(i-1))));
-							sb.append("\n");
-						}
-						sb.append(ls.getStations().get(0).getName());
-						sb.append("\n");
-						//TODO append distance here
-					} else {
-						for (int i = 0; i < onlyIndex; i++) {
-							sb.append(ls.getStations().get(i).getName());
-							sb.append("\n");
-							sb.append(ls.getStations().get(i).getDistanceTo((ls.getStations().get(i+1))));
-							sb.append("\n");
-						}
-						sb.append(ls.getStations().get(onlyIndex).getName());
+				if (finalIndexA == -1) {
+					finalIndexA = indexA;
+					if (finalIndexA > -1) {
+						segA = ls;
 					}
-					foundFirst = true;
+				}
+				if (finalIndexB == -1) {
+					finalIndexB = indexB;
+					if (finalIndexB > -1) {
+						segB = ls;
+					}
 				}
 			}
 		}
+		if (segA == mainSegment) {
+			sb.append(tracePathBetween(finalIndexA, segA.getStations().indexOf(segB.getStations().get(0)), segA));
+			sb.append(tracePathBetween(0, finalIndexB, segB));
+		} else {
+			sb.append(tracePathBetween(finalIndexA, 0, segA));
+			if (segB == mainSegment) {
+				sb.append(tracePathBetween(segB.getStations().indexOf(segA.getStations().get(0)), finalIndexB, segB));
+			} else {
+				sb.append(tracePathBetween(mainSegment.getStations().indexOf(segA.getStations().get(0)), mainSegment.getStations().indexOf(segB.getStations().get(0)), mainSegment));
+				sb.append(tracePathBetween(0, finalIndexB, segB));
+			}
+		}
+		return sb.toString();
+	}
+
+	public String tracePathBetween(int fromIndex, int toIndex, LineSegment ls) {
+		StringBuilder sb = new StringBuilder();
+		if (fromIndex < toIndex) {
+			for (int i = fromIndex; i < toIndex; i++) {
+				sb.append(traceStep(i, ls, false));
+			}
+		} else {
+			for (int i = fromIndex; i > toIndex; i--) {
+				sb.append(traceStep(i, ls, true));
+			}
+		}
+		return sb.toString();
+	}
+
+	public String traceStep(int i, LineSegment ls, boolean backwards) {
+		StringBuilder sb = new StringBuilder();
+		sb.append(ls.getStations().get(i).getName());
+		sb.append("\n");
+		sb.append(ls.getStations().get(i).getDistanceTo(ls.getStations().get(backwards ? i - 1 : i + 1)));
+		sb.append(" (mins) to");
+		sb.append("\n");
 		return sb.toString();
 	}
 
@@ -142,7 +157,21 @@ public class Line {
 				}
 			}
 			sb.append("\r\n");
+			sb.append("|");
+			sb.append("\r\n");
 		}
+		sb.delete(sb.length() - 5, sb.length());
 		return sb.toString();
+	}
+
+	public void recordIntersections() {
+		for (Station s : stations.values()) {
+			for (Line l : s.getLines()) {
+				if (l != this) {
+					intersections.put(l, s);
+				}
+			}
+		}
+
 	}
 }

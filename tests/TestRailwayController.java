@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 import org.junit.Test;
 
@@ -24,7 +25,7 @@ public class TestRailwayController {
 	private RailwayController rwc;
 
 	public void setUp() throws PreviousNotFoundException, InvalidFormatException, IOException {
-		RailwayCreator creator = new RailwayCreator();
+		RailwayCreator creator = new RailwayCreator("");
 		rwc = new RailwayController(creator.processFile());
 	}
 
@@ -179,24 +180,64 @@ public class TestRailwayController {
 		setUp();
 
 		List<String[]> inputs = new LinkedList<String[]>();
-		//inputs.add(new String[]{"Liverpool Lime Street", "Stratford-upon-Avon"});
+		inputs.add(new String[]{"Liverpool Lime Street", "Stratford-upon-Avon"});
 		inputs.add(new String[]{"Olton", "Birmingham Moor Street"});
 		inputs.add(new String[]{"Birmingham Snow Hill", "Leamington Spa"});
 		inputs.add(new String[]{"Hagley", "Hatton"});
-		inputs.add(new String[]{"Nuneaton", "Stourbridge"});
+		inputs.add(new String[]{"Nuneaton", "Stourbridge Junction"});
 		inputs.add(new String[]{"Stratford-upon-Avon", "Acocks Green"});
 		inputs.add(new String[]{"Acocks Green", "Stratford-upon-Avon"});
 		for (String[] s : inputs) {
 			String stationA = s[0];
 			String stationB = s[1];
 			String path = rwc.showPathBetween(stationA, stationB);
-			String[] stations = path.split("\n");
-			assertTrue(stationA.equals(stations[0]) || stationA.equals(stations[stations.length -1]));
-			assertTrue(stationB.equals(stations[0]) || stationB.equals(stations[stations.length - 1]));
-			for (int i = 0; i < stations.length - 2; i += 2) {
-				assertTrue(rwc.getMap().stations.get(stations[i]).getConnections().keySet().contains(stations[i + 2]));
-				assertEquals((int) rwc.getMap().stations.get(stations[i]).getConnections().get(stations[i + 2]), (int) Integer.parseInt(stations[i + 1]));
+			String[] route = path.split("\n");
+			assertTrue(stationA.equals(route[0]) || stationA.equals(route[route.length -1]));
+			assertTrue(stationB.equals(route[0]) || stationB.equals(route[route.length - 1]));
+			for (int i = 0; i < route.length - 2; i += 2) {
+				assertTrue(rwc.getMap().stations.get(route[i]).getConnections().keySet().contains(route[i + 2]));
+				assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1]));
 			}
+		}
+	}
+	
+	@Test
+	public void testGetPathRandomStations() throws PreviousNotFoundException, InvalidFormatException, IOException {
+		setUp();
+		Random rand = new Random();
+		Station[] stations = rwc.getMap().getStations().values().toArray(new Station[rwc.getMap().getStations().values().size()]);
+		List<String[]> inputs = new LinkedList<String[]>();
+		for (int i = 0; i < 20; i++) {
+			inputs.add(new String[] {stations[rand.nextInt(stations.length)].getName(), stations[rand.nextInt(stations.length)].getName()});
+		}
+		for (String[] s : inputs) {
+			String stationA = s[0];
+			System.out.println(stationA);
+			String stationB = s[1];
+			System.out.println(stationB);
+			String path = rwc.showPathBetween(stationA, stationB);
+			String[] route = path.split("\n");
+			assertTrue(stationA.equals(route[0]) || stationA.equals(route[route.length -1]));
+			assertTrue(stationB.equals(route[0]) || stationB.equals(route[route.length - 1]));
+			for (int i = 0; i < route.length - 2; i += 2) {
+				assertTrue(rwc.getMap().stations.get(route[i]).getConnections().keySet().contains(route[i + 2]));
+				assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1]));
+			}
+		}
+	}
+	
+	@Test
+	public void testGetPathSpecific() throws PreviousNotFoundException, InvalidFormatException, IOException {
+		setUp();
+		String stationA = "Stewartby";
+		String stationB = "Stratford-upon-Avon Parkway";
+		String path = rwc.showPathBetween(stationA, stationB);
+		String[] route = path.split("\n");
+		assertTrue(stationA.equals(route[0]) || stationA.equals(route[route.length -1]));
+		assertTrue(stationB.equals(route[0]) || stationB.equals(route[route.length - 1]));
+		for (int i = 0; i < route.length - 2; i += 2) {
+			assertTrue(rwc.getMap().stations.get(route[i]).getConnections().keySet().contains(route[i + 2]));
+			assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1]));
 		}
 	}
 
