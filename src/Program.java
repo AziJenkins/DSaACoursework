@@ -12,7 +12,7 @@ public class Program {
 	public static void main(String[] args) throws FileNotFoundException, InvalidFormatException, IOException, PreviousNotFoundException {
 		RailwayCreator create = new RailwayCreator("");
 		RailwayController controller = new RailwayController(create.processFile());
-		TUI tui = new TUI(controller);
+		new TUI(controller);
 	}
 
 }

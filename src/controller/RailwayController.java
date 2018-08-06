@@ -1,27 +1,34 @@
 package controller;
 
 import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
 
-import exceptions.BothStationsNotPresentException;
 import model.Line;
 import model.Map;
 import model.Station;
 
+/**
+ * @author azira
+ *
+ */
 public class RailwayController implements Controller {
 
+	/**
+	 * 
+	 */
 	private Map map;
 
+	/**
+	 * @param map
+	 */
 	public RailwayController(Map map) {
 		this.map = map;
 	}
 
+	/* (non-Javadoc)
+	 * @see controller.Controller#listAllTermini(java.lang.String)
+	 */
 	@Override
 	public String listAllTermini(String line) {
 		StringBuilder sb = new StringBuilder();
@@ -33,11 +40,17 @@ public class RailwayController implements Controller {
 		return sb.toString();
 	}
 
+	/* (non-Javadoc)
+	 * @see controller.Controller#listStationsInLine(java.lang.String)
+	 */
 	@Override
 	public String listStationsInLine(String line) {
 		return map.getLineByName(line).toString();
 	}
 
+	/* (non-Javadoc)
+	 * @see controller.Controller#showPathBetween(java.lang.String, java.lang.String)
+	 */
 	@Override
 	public String showPathBetween(String stationA, String stationB) {
 		Station stA = map.getStationByName(stationA);
@@ -47,7 +60,6 @@ public class RailwayController implements Controller {
 		StringBuilder sb = new StringBuilder();
 
 		// check if they share a line
-		@SuppressWarnings("unchecked")
 		Collection<Line> paths = checkForCommonLine(linesA, linesB);
 		if (paths != null) {
 			return paths.iterator().next().getPathBetween(stA, stB) + stationB;
@@ -58,7 +70,6 @@ public class RailwayController implements Controller {
 			if (paths != null) {
 				Line path = paths.iterator().next();
 				Station iPoint = l.getIntersections().get(path);
-
 				sb.append(l.getPathBetween(stA, iPoint));
 				sb.append(path.getPathBetween(iPoint, stB));
 				sb.append(stationB);
@@ -120,6 +131,11 @@ public class RailwayController implements Controller {
 		return "Could not find a path";
 	}
 
+	/**
+	 * @param linesA
+	 * @param linesB
+	 * @return
+	 */
 	public Collection<Line> checkForCommonLine(Collection<Line> linesA, Collection<Line> linesB) {
 		Collection<Line> commonLines = new HashSet<Line>();
 		commonLines.addAll(linesA);
@@ -130,6 +146,11 @@ public class RailwayController implements Controller {
 		return null;
 	}
 	
+	/**
+	 * @param linesA
+	 * @param linesB
+	 * @return
+	 */
 	public Collection<Line> checkForCommonIntersection(Collection<Line> linesA, Collection<Line> linesB) {
 		Collection<Line> linesAI = new HashSet<Line>();
 		Collection<Line> linesBI = new HashSet<Line>();
@@ -142,6 +163,9 @@ public class RailwayController implements Controller {
 		return checkForCommonLine(linesAI, linesBI);
 	}
 
+	/**
+	 * @return
+	 */
 	public Map getMap() {
 		return map;
 	}

@@ -1,9 +1,7 @@
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -12,11 +10,8 @@ import java.util.Random;
 import org.junit.Test;
 
 import controller.RailwayController;
-import exceptions.BothStationsNotPresentException;
 import exceptions.InvalidFormatException;
 import exceptions.PreviousNotFoundException;
-import model.Line;
-import model.Map;
 import model.Station;
 import setup.RailwayCreator;
 
@@ -138,45 +133,45 @@ public class TestRailwayController {
 		setUp();
 
 		String s0 = rwc.listStationsInLine("Birmingham -- Dorridge -- Leamington Spa");
-		String s0x = "Birmingham Snow Hill\nBirmingham Moor Street\nBordesley\nSmall Heath\nTyseley\nAcocks Green\nOlton\nSolihull\nWidney Manor\nDorridge -- Lapworth -- Hatton -- Warwick -- Leamington Spa\nStratford-upon-Avon Parkway\nStratford-upon-Avon\n";
-
+		String s0x = "Birmingham Snow Hill\r\n|\r\nBirmingham Moor Street\r\n|\r\nBordesley\r\n|\r\nSmall Heath\r\n|\r\nTyseley\r\n|\r\nAcocks Green\r\n|\r\nOlton\r\n|\r\nSolihull\r\n|\r\nWidney Manor\r\n|\r\nDorridge -- Lapworth -- Hatton -- Warwick -- Leamington Spa\r\n|\r\nStratford-upon-Avon Parkway\r\n|\r\nStratford-upon-Avon";
+		assertTrue(s0x.equals(s0));
 		String s1 = rwc.listStationsInLine("Cross City Line");
-		String s1x = "Lichfield Trent Valley\nLichfield City\nShenstone\nBlake Street\nButlers Lane\nFour Oaks\nSutton Coldfield\nWylde Green\nChester Road\nErdington\nGravelly Hill\nAston\nDuddeston\nBirmingham New Street\nFive Ways\nUniversity\nSelly Oak\nBournville\nKings Norton\nNorthfield\nLongbridge\nBarnt Green\nAlvechurch\nRedditch\n";
-
+		String s1x = "Lichfield Trent Valley\r\n|\r\nLichfield City\r\n|\r\nShenstone\r\n|\r\nBlake Street\r\n|\r\nButlers Lane\r\n|\r\nFour Oaks\r\n|\r\nSutton Coldfield\r\n|\r\nWylde Green\r\n|\r\nChester Road\r\n|\r\nErdington\r\n|\r\nGravelly Hill\r\n|\r\nAston\r\n|\r\nDuddeston\r\n|\r\nBirmingham New Street\r\n|\r\nFive Ways\r\n|\r\nUniversity\r\n|\r\nSelly Oak\r\n|\r\nBournville\r\n|\r\nKings Norton\r\n|\r\nNorthfield\r\n|\r\nLongbridge\r\n|\r\nBarnt Green\r\n|\r\nAlvechurch\r\n|\r\nRedditch";
+		assertEquals(s1x,s1);
 		String s2 = rwc.listStationsInLine("Birmingham -- Rugby -- Northampton -- London");
-		String s2x = "Birmingham New Street\nBirmingham International\nCoventry\nRugby\nLong Buckby\nNorthampton\nWolverton\nMilton Keynes Central\nBletchley\nLeighton Buzzard\nBerkhamsted\nHemel Hempstead\nWatford Junction\nLondon Euston\n";
-
+		String s2x = "Birmingham New Street\r\n|\r\nBirmingham International\r\n|\r\nCoventry\r\n|\r\nRugby\r\n|\r\nLong Buckby\r\n|\r\nNorthampton\r\n|\r\nWolverton\r\n|\r\nMilton Keynes Central\r\n|\r\nBletchley\r\n|\r\nLeighton Buzzard\r\n|\r\nBerkhamsted\r\n|\r\nHemel Hempstead\r\n|\r\nWatford Junction\r\n|\r\nLondon Euston";
+		assertEquals(s2x,s2);
 		String s3 = rwc.listStationsInLine("Nuneaton -- Coventry");
-		String s3x = "Nuneaton\nBermuda Park\nBedworth\nCoventry Arena\nCoventry\n";
-
+		String s3x = "Nuneaton\r\n|\r\nBermuda Park\r\n|\r\nBedworth\r\n|\r\nCoventry Arena\r\n|\r\nCoventry";
+		assertEquals(s3x,s3);
 		String s4 = rwc.listStationsInLine("Watford -- St Albans Abbey");
-		String s4x = "Watford Junction\nWatford North\nGarston\nBricket Wood\nHow Wood\nPark Street\nSt Albans Abbey\n";
-
+		String s4x = "Watford Junction\r\n|\r\nWatford North\r\n|\r\nGarston\r\n|\r\nBricket Wood\r\n|\r\nHow Wood\r\n|\r\nPark Street\r\n|\r\nSt Albans Abbey";
+		assertEquals(s4x,s4);
 		String s5 = rwc.listStationsInLine("Bletchley -- Bedford");
-		String s5x = "Bletchley\nFenny Stratford\nBow Brickhill\nWoburn Sands\nAspley Guise\nRidgmont\nLidlington\nMillbrook\nStewartby\nKempston Hardwick\nBedford St Johns\nBedford\n";
-
+		String s5x = "Bletchley\r\n|\r\nFenny Stratford\r\n|\r\nBow Brickhill\r\n|\r\nWoburn Sands\r\n|\r\nAspley Guise\r\n|\r\nRidgmont\r\n|\r\nLidlington\r\n|\r\nMillbrook\r\n|\r\nStewartby\r\n|\r\nKempston Hardwick\r\n|\r\nBedford St Johns\r\n|\r\nBedford";
+		assertEquals(s5x,s5);
 		String s6 = rwc.listStationsInLine("Crewe -- Stoke -- Stafford -- London");
-		String s6x = "Crewe\nAlsager\nKidsgrove\nStoke-on-Trent\nStone\nStafford\nRugeley Trent Valley\nLichfield Trent Valley\nTamworth\nPolesworth\nAtherstone\nNuneaton\nRugby\nNorthampton\nMilton Keynes Central\nWatford Junction\nLondon Euston\n";
-
+		String s6x = "Crewe\r\n|\r\nAlsager\r\n|\r\nKidsgrove\r\n|\r\nStoke-on-Trent\r\n|\r\nStone\r\n|\r\nStafford\r\n|\r\nRugeley Trent Valley\r\n|\r\nLichfield Trent Valley\r\n|\r\nTamworth\r\n|\r\nPolesworth\r\n|\r\nAtherstone\r\n|\r\nNuneaton\r\n|\r\nRugby\r\n|\r\nNorthampton\r\n|\r\nMilton Keynes Central\r\n|\r\nWatford Junction\r\n|\r\nLondon Euston";
+		assertEquals(s6x,s6);
 		String s7 = rwc.listStationsInLine("Worcester -- Birmingham");
-		String s7x = "Worcester Foregate Street\nWorcester Shrub Hill\nDroitwich Spa\nHartlebury\nKidderminster\nBlakedown\nHagley\nStourbridge Junction\nLye\nCradley Heath\nOld Hill\nRowley Regis\nLangley Green\nSmethwick Galton Bridge\nThe Hawthorns\nJewellery Quarter\nBirmingham Snow Hill\nBirmingham Moor Street -- Whitlocks End -- Stratford-upon-Avon\nSolihull\nDorridge\n";
-
+		String s7x = "Worcester Foregate Street\r\n|\r\nWorcester Shrub Hill\r\n|\r\nDroitwich Spa\r\n|\r\nHartlebury\r\n|\r\nKidderminster\r\n|\r\nBlakedown\r\n|\r\nHagley\r\n|\r\nStourbridge Junction\r\n|\r\nLye\r\n|\r\nCradley Heath\r\n|\r\nOld Hill\r\n|\r\nRowley Regis\r\n|\r\nLangley Green\r\n|\r\nSmethwick Galton Bridge\r\n|\r\nThe Hawthorns\r\n|\r\nJewellery Quarter\r\n|\r\nBirmingham Snow Hill\r\n|\r\nBirmingham Moor Street -- Whitlocks End -- Stratford-upon-Avon\r\n|\r\nSolihull\r\n|\r\nDorridge";
+		assertEquals(s7x,s7);
 		String s8 = rwc.listStationsInLine("Smethwick Galton Bridge Connections");
-		String s8x = "Liverpool Lime Street\nLiverpool South Parkway\nCrewe\nShrewsbury\nTelford Central\nWolverhampton\nSmethwick Galton Bridge\nBirmingham New Street\n";
-
+		String s8x = "Liverpool Lime Street\r\n|\r\nLiverpool South Parkway\r\n|\r\nCrewe\r\n|\r\nShrewsbury\r\n|\r\nTelford Central\r\n|\r\nWolverhampton\r\n|\r\nSmethwick Galton Bridge\r\n|\r\nBirmingham New Street\r\n|\r\nBirmingham International";
+		assertEquals(s8x,s8);
 		String s9 = rwc.listStationsInLine("Birmingham -- Stratford-upon-Avon");
-		String s9x = "Worcester Foregate Street\nKidderminster\nStourbridge Junction\nBirmingham Snow Hill\nBirmingham Moor Street\nSmall Heath\nTyseley\nSpring Road\nHall Green\nYardley Wood\nShirley\nWhitlocks End\nWythall\nEarlswood\nThe Lakes\nWood End\nDanzey\nHenley-in-Arden\nWootton Wawen\nWilmcote\nStratford-upon-Avon Parkway\nStratford-upon-Avon\n";
-
+		String s9x = "Worcester Foregate Street\r\n|\r\nKidderminster\r\n|\r\nStourbridge Junction\r\n|\r\nBirmingham Snow Hill\r\n|\r\nBirmingham Moor Street\r\n|\r\nSmall Heath\r\n|\r\nTyseley\r\n|\r\nSpring Road\r\n|\r\nHall Green\r\n|\r\nYardley Wood\r\n|\r\nShirley\r\n|\r\nWhitlocks End\r\n|\r\nWythall\r\n|\r\nEarlswood\r\n|\r\nThe Lakes\r\n|\r\nWood End\r\n|\r\nDanzey\r\n|\r\nHenley-in-Arden\r\n|\r\nWootton Wawen\r\n|\r\nWilmcote\r\n|\r\nStratford-upon-Avon Parkway\r\n|\r\nStratford-upon-Avon";
+		assertEquals(s9x,s9);
 		String s10 = rwc.listStationsInLine("Birmingham -- Wolverhampton -- Telford -- Shrewsbury");
-		String s10x = "Birmingham International\nBirmingham New Street -- Sandwell & Dudley\nSmethwick Galton Bridge\nSandwell & Dudley\nWolverhampton\nBilbrook\nCodsall\nAlbrighton\nCosford\nShifnal\nTelford Central\nOakengates\nWellington\n";
-
+		String s10x = "Birmingham International\r\n|\r\nBirmingham New Street -- Sandwell & Dudley\r\n|\r\nSmethwick Galton Bridge\r\n|\r\nSandwell & Dudley\r\n|\r\nWolverhampton\r\n|\r\nBilbrook\r\n|\r\nCodsall\r\n|\r\nAlbrighton\r\n|\r\nCosford\r\n|\r\nShifnal\r\n|\r\nTelford Central\r\n|\r\nOakengates\r\n|\r\nWellington\r\n|\r\nShrewsbury";
+		assertEquals(s10x,s10);
 		String s11 = rwc.listStationsInLine("Birmingham -- Worcester -- Hereford");
-		String s11x = "Birmingham Moor Street\nBirmingham Snow Hill\nStourbridge Junction\nHagley\nKidderminster\nHartlebury\nDroitwich Spa -- Bromsgrove -- University -- Birmingham New Street\nWorcester Shrub Hill\nWorcester Foregate Street\nMalvern Link\nGreat Malvern\nColwall\nLedbury\nHereford\n";
-
+		String s11x = "Birmingham Moor Street\r\n|\r\nBirmingham Snow Hill\r\n|\r\nStourbridge Junction\r\n|\r\nHagley\r\n|\r\nKidderminster\r\n|\r\nHartlebury\r\n|\r\nDroitwich Spa -- Bromsgrove -- University -- Birmingham New Street\r\n|\r\nWorcester Shrub Hill\r\n|\r\nWorcester Foregate Street\r\n|\r\nMalvern Link\r\n|\r\nGreat Malvern\r\n|\r\nColwall\r\n|\r\nLedbury\r\n|\r\nHereford";
+		assertEquals(s11x,s11);
 	}
 
 	@Test
-	public void testGetPath() throws PreviousNotFoundException, InvalidFormatException, IOException, BothStationsNotPresentException {
+	public void testGetPath() throws PreviousNotFoundException, InvalidFormatException, IOException {
 		setUp();
 
 		List<String[]> inputs = new LinkedList<String[]>();
@@ -196,7 +191,7 @@ public class TestRailwayController {
 			assertTrue(stationB.equals(route[0]) || stationB.equals(route[route.length - 1]));
 			for (int i = 0; i < route.length - 2; i += 2) {
 				assertTrue(rwc.getMap().stations.get(route[i]).getConnections().keySet().contains(route[i + 2]));
-				assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1]));
+				assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1].split(" ")[0]));
 			}
 		}
 	}
@@ -221,7 +216,7 @@ public class TestRailwayController {
 			assertTrue(stationB.equals(route[0]) || stationB.equals(route[route.length - 1]));
 			for (int i = 0; i < route.length - 2; i += 2) {
 				assertTrue(rwc.getMap().stations.get(route[i]).getConnections().keySet().contains(route[i + 2]));
-				assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1]));
+				assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1].split(" ")[0]));
 			}
 		}
 	}
@@ -237,7 +232,7 @@ public class TestRailwayController {
 		assertTrue(stationB.equals(route[0]) || stationB.equals(route[route.length - 1]));
 		for (int i = 0; i < route.length - 2; i += 2) {
 			assertTrue(rwc.getMap().stations.get(route[i]).getConnections().keySet().contains(route[i + 2]));
-			assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1]));
+			assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1].split(" ")[0]));
 		}
 	}
 

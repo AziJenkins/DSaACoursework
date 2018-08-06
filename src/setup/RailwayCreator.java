@@ -1,31 +1,51 @@
 package setup;
 
 import java.io.BufferedReader;
-import java.io.EOFException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
-import exceptions.BothStationsAlreadyPresentException;
 import exceptions.InvalidFormatException;
-import exceptions.InvalidSubLineException;
-import exceptions.LineNotFoundException;
 import exceptions.PreviousNotFoundException;
 import model.Line;
 import model.Map;
 import model.Station;
 
+/**
+ * @author azira
+ *
+ */
 public class RailwayCreator {
 
+	/**
+	 * 
+	 */
 	private String file = "src/WestMidlandsRailway.csv";
+	/**
+	 * 
+	 */
 	private BufferedReader br;
+	/**
+	 * 
+	 */
 	private String[] input;
+	/**
+	 * 
+	 */
 	private LinkedList<String[]> northFacingSubLines;
+	/**
+	 * 
+	 */
 	private Map map;
+	/**
+	 * 
+	 */
 	private HashMap<String, Station> stations;
+	/**
+	 * 
+	 */
 	private HashMap<String, Line> lines;
 
 	/*
@@ -36,6 +56,12 @@ public class RailwayCreator {
 	 * 
 	 */
 
+	/**
+	 * @param file
+	 * @throws InvalidFormatException
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
 	public RailwayCreator(String file) throws InvalidFormatException, FileNotFoundException, IOException {
 		if (!file.isEmpty()) {
 			this.file = file;
@@ -52,6 +78,11 @@ public class RailwayCreator {
 		lines = new HashMap<String, Line>();
 	}
 
+	/**
+	 * @return
+	 * @throws IOException
+	 * @throws PreviousNotFoundException
+	 */
 	public Map processFile() throws IOException, PreviousNotFoundException {
 		while (processInputLine())
 			;
@@ -61,6 +92,11 @@ public class RailwayCreator {
 		return map;
 	}
 
+	/**
+	 * @return
+	 * @throws IOException
+	 * @throws PreviousNotFoundException
+	 */
 	private boolean processInputLine() throws IOException, PreviousNotFoundException {
 
 		if (!getLine()) {
@@ -95,6 +131,10 @@ public class RailwayCreator {
 		return true;
 	}
 
+	/**
+	 * @return
+	 * @throws PreviousNotFoundException
+	 */
 	private boolean processNorthFacingSubLines() throws PreviousNotFoundException {
 		Iterator<String[]> i = northFacingSubLines.descendingIterator();
 		while (i.hasNext()) {
@@ -123,6 +163,10 @@ public class RailwayCreator {
 		return true;
 	}
 
+	/**
+	 * @return
+	 * @throws IOException
+	 */
 	private boolean getLine() throws IOException {
 		String line = br.readLine();
 		if (line == null) {
@@ -133,6 +177,10 @@ public class RailwayCreator {
 
 	}
 
+	/**
+	 * @param line
+	 * @throws InvalidFormatException
+	 */
 	private void checkFormat(String[] line) throws InvalidFormatException {
 		if (line.length != 4) {
 			throw new InvalidFormatException("Incorrect number of columns");
@@ -151,6 +199,9 @@ public class RailwayCreator {
 		}
 	}
 
+	/**
+	 * @throws IOException
+	 */
 	private void close() throws IOException {
 		br.close();
 	}

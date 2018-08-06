@@ -6,7 +6,6 @@ package view;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import javax.print.attribute.HashAttributeSet;
 
 import controller.Controller;
 

@@ -1,6 +1,5 @@
 import org.junit.Test;
 
-import exceptions.BothStationsAlreadyPresentException;
 import exceptions.InvalidFormatException;
 import exceptions.InvalidSubLineException;
 import exceptions.LineNotFoundException;
@@ -15,7 +14,7 @@ public class TestRailwayCreator {
 	RailwayCreator rwc;
 	
 	@Test
-	public void test() throws LineNotFoundException, BothStationsAlreadyPresentException, InvalidFormatException, IOException, InvalidSubLineException, PreviousNotFoundException {
+	public void test() throws LineNotFoundException, InvalidFormatException, IOException, InvalidSubLineException, PreviousNotFoundException {
 		rwc = new RailwayCreator();
 		boolean willContinue = true;
 		while(willContinue) {
