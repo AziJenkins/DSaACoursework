@@ -1,7 +1,10 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -191,7 +194,7 @@ public class TestRailwayController {
 			assertTrue(stationB.equals(route[0]) || stationB.equals(route[route.length - 1]));
 			for (int i = 0; i < route.length - 2; i += 2) {
 				assertTrue(rwc.getMap().stations.get(route[i]).getConnections().keySet().contains(route[i + 2]));
-				assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1].split(" ")[0]));
+				assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), Integer.parseInt(route[i + 1].split(" ")[0]));
 			}
 		}
 	}
@@ -216,7 +219,7 @@ public class TestRailwayController {
 			assertTrue(stationB.equals(route[0]) || stationB.equals(route[route.length - 1]));
 			for (int i = 0; i < route.length - 2; i += 2) {
 				assertTrue(rwc.getMap().stations.get(route[i]).getConnections().keySet().contains(route[i + 2]));
-				assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1].split(" ")[0]));
+				assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), Integer.parseInt(route[i + 1].split(" ")[0]));
 			}
 		}
 	}
@@ -232,8 +235,21 @@ public class TestRailwayController {
 		assertTrue(stationB.equals(route[0]) || stationB.equals(route[route.length - 1]));
 		for (int i = 0; i < route.length - 2; i += 2) {
 			assertTrue(rwc.getMap().stations.get(route[i]).getConnections().keySet().contains(route[i + 2]));
-			assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), (int) Integer.parseInt(route[i + 1].split(" ")[0]));
+			assertEquals((int) rwc.getMap().stations.get(route[i]).getConnections().get(route[i + 2]), Integer.parseInt(route[i + 1].split(" ")[0]));
 		}
+	}
+	
+	@Test
+	public void testOutput() throws PreviousNotFoundException, InvalidFormatException, IOException {
+		setUp();
+		PrintWriter pw = new PrintWriter("SampleOutput.txt", "UTF-8");
+		pw.write("List all termini of Cross City Line\r\n");
+		pw.write(rwc.listAllTermini("Cross City Line"));
+		pw.write("\r\n\r\nShow all stations on Watford -- St Albans Abbey\r\n");
+		pw.write(rwc.listStationsInLine("Watford -- St Albans Abbey"));
+		pw.write("\r\n\r\nShow path between Sandwell & Dudley and Stone\r\n");
+		pw.write(rwc.showPathBetween("Sandwell & Dudley", "Stone"));
+		pw.close();
 	}
 
 }

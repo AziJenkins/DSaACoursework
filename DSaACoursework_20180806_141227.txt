@@ -1,0 +1,11 @@
+ERROR - 14:12:27: java.net.MalformedURLException: unknown protocol: pathmap
+ERROR - 14:12:47: java.net.MalformedURLException: unknown protocol: pathmap
+ERROR - 14:13:02: org.xml.sax.SAXParseExceptionpublicId: /DSaACoursework/src/model/Line.java; systemId: file:///DSaACoursework/src/model/Line.java; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+ERROR - 14:13:02: org.xml.sax.SAXParseExceptionpublicId: /DSaACoursework/src/model/Line.java; systemId: file:///DSaACoursework/src/model/Line.java; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+WARNING - 14:13:32: Convert model
+WARNING - 14:13:32: First conversion pass
+ERROR - 14:13:32: java.net.MalformedURLException: unknown protocol: pathmap
+WARNING - 14:13:47: Convert model
+WARNING - 14:13:47: First conversion pass
+ERROR - 14:13:47: org.xml.sax.SAXParseExceptionpublicId: /DSaACoursework/src/model/Line.java; systemId: file:///DSaACoursework/src/model/Line.java; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+ERROR - 14:13:47: org.xml.sax.SAXParseExceptionpublicId: /DSaACoursework/src/model/Line.java; systemId: file:///DSaACoursework/src/model/Line.java; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.

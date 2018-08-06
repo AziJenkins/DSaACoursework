@@ -20,7 +20,7 @@ public class TUI {
 
 	private Controller controller;
 	private Scanner stdIn;
-	private HashMap<String, String> lines;
+	private HashMap<String, String> lines; //String representations of the lines, addressable by their 'ID'
 
 	public TUI(Controller controller) {
 
@@ -54,7 +54,7 @@ public class TUI {
 		case "1": // Lists all termini along a specified line
 			display("Lists all termini along a line...");
 			while (true) {
-				display("Enter the ID of the required line.");
+				display("Enter the ID of the required line."); //I assumed this meant the letters a-l so i changed it
 				display(allWMRlines());
 				String input = stdIn.nextLine().trim();
 				String line = lines.get(input);

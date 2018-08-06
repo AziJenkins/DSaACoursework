@@ -59,6 +59,7 @@ public class LineSegment {
 	/* 
 	 * A String representation of this LineSegment delimited by " -- "
 	 */
+	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		Iterator<Station> it = stations.iterator();

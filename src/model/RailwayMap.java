@@ -7,18 +7,18 @@ import java.util.HashMap;
  * @author azira
  *
  */
-public class Map {
+public class RailwayMap {
 
 	/**
 	 * A Map between each Name and its Line
 	 */
-	public HashMap<String, Line> lines;
+	private HashMap<String, Line> lines;
 	/**
 	 * A Mapo between each Name and its Station
 	 */
-	public HashMap<String, Station> stations;
+	private HashMap<String, Station> stations;
 
-	public Map() {
+	public RailwayMap() {
 		lines = new HashMap<String, Line>();
 		stations = new HashMap<String, Station>();
 	}
@@ -61,6 +61,7 @@ public class Map {
 	 * 
 	 * @see java.lang.Object#toString()
 	 */
+	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		for (Line l : lines.values()) {

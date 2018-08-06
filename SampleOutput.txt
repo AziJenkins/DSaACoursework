@@ -1,0 +1,58 @@
+List all termini of Cross City Line
+Redditch
+Lichfield Trent Valley
+
+
+Show all stations on Watford -- St Albans Abbey
+Watford Junction
+|
+Watford North
+|
+Garston
+|
+Bricket Wood
+|
+How Wood
+|
+Park Street
+|
+St Albans Abbey
+
+Show path between Sandwell & Dudley and Stone
+Sandwell & Dudley
+3 (mins) to
+Smethwick Galton Bridge
+7 (mins) to
+Birmingham New Street
+7 (mins) to
+Duddeston
+3 (mins) to
+Aston
+4 (mins) to
+Gravelly Hill
+2 (mins) to
+Erdington
+3 (mins) to
+Chester Road
+2 (mins) to
+Wylde Green
+2 (mins) to
+Sutton Coldfield
+4 (mins) to
+Four Oaks
+3 (mins) to
+Butlers Lane
+2 (mins) to
+Blake Street
+3 (mins) to
+Shenstone
+3 (mins) to
+Lichfield City
+4 (mins) to
+Lichfield Trent Valley
+8 (mins) to
+Rugeley Trent Valley
+3 (mins) to
+Stafford
+12 (mins) to
+Stone
